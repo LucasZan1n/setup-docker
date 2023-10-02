@@ -1,0 +1,14 @@
+services:
+  nginx:
+    build:
+      dockerfile: nginx/Dockerfile
+    ports:
+    - 80:80
+
+  vite:
+    build:
+      dockerfile:
+        vite/Dockerfile
+      context: .
+    ports:
+      - 5173:5173
